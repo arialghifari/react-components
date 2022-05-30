@@ -1,23 +1,22 @@
-import React from "react";
-
 const CommentDetail = (props) => {
   return (
-    <div className="comment w-[500px] flex flex-row gap-4">
-      <a
-        href="/"
-        className="bg-cover bg-center h-16 w-16 rounded-full"
-        style={{ backgroundImage: `url(${props.avatar})` }}
-      >
-        {" "}
-      </a>
-      <div className="basis-5/6">
-        <a href="/" className="inline text-lg font-bold">
+    <section className="comment flex flex-col gap-2 sm:flex-row sm:gap-4">
+      <div className="w-20 min-w-[80px]">
+        <img
+          src={props.avatar}
+          alt="profile"
+          className="rounded-full object-cover object-center"
+        />
+      </div>
+
+      <div className="content">
+        <a href="/" className="text-lg font-bold">
           {props.author}
         </a>
         <p className="inline text-gray-500 ml-4">{props.timeAgo}</p>
         <p className="mt-1">{props.comment}</p>
       </div>
-    </div>
+    </section>
   );
 };
 
