@@ -1,5 +1,4 @@
 const ApprovalCard = (props) => {
-  console.log(props.children);
   return (
     <section className="card border rounded-md my-6">
       <div className="content p-4">{props.children}</div>
